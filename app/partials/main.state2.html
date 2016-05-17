@@ -1,8 +1,25 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3 class="panel-title">Main.State2</h3>
-	</div>
-	<div class="panel-body">
-		Main.State2
-	</div>
+<div id="StateContainer" class="col-md-6 col-md-offset-3 container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1>Astro Weight Calculator</h1>
+        </div>
+        <div class="panel-body">
+            <h3>Enter your weight and select a planet</h3>
+            <div class="input-group">
+                <input ng-model="vm.inputWeight" type="text" class="form-control">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planet <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li ng-repeat="planet in vm.Planets"><a ng-click="vm.calculate(planet)">{{planet.Name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <br>
+                <p ng-show="vm.showResults">You would weigh {{ vm.PlanetWeight }} pounds on {{ vm.Planet.Name}}.</p>
+                <br>
+                <img src=../app/images/{{vm.Planet.Image}}>
+            </div>
+        </div>
+    </div>
 </div>

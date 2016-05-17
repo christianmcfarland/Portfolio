@@ -25,7 +25,7 @@
             .state('main.state2', {
                 url: "/state2",
                 templateUrl: "app/partials/main.state2.html",
-                controller: ""
+                controller: "State2Controller as vm"
             })
            
 })
