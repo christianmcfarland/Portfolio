@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VerySimple</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/style/style.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/toastr/toastr.js"></script>
+    <!-- endbower -->
+    <div class="page-header">
+        <h1>VerySimple<small>Applications</small></h1>
+        <span id="backgroundColorButtons" class="btn-group">
+			  	<button type="button" class="btn btn-default"></button>
+			  </span>
+    </div>
+    <div ui-view></div>
+    <!-- inject:js -->
+    <script src="/app/js/app.js"></script>
+    <script src="/app/js/main.controller.js"></script>
+    <script src="/app/js/main.state1.conroller.js"></script>
+    <script src="/app/js/main.state1.factory.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

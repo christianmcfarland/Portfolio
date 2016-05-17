@@ -1,0 +1,44 @@
+<div id="ToDoList" class="col-md-6 col-md-offset-3 container-fluid">
+    <div ng-show="vm.edit" class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Enter ToDo Item and Select Priority</h3>
+        </div>
+        <div class="panel-body">
+            <div class="input-group">
+                <input ng-model="vm.ToDo.ToDoText" type="text" class="form-control">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Priority <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a ng-click="vm.add(3)">Low</a></li>
+                        <li><a ng-click="vm.add(2)">Normal</a></li>
+                        <li><a ng-click="vm.add(1)">High</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div id="ToDoListTitle" class="panel-title">ToDo List</div>
+            <button id="addNew"><a ng-click="vm.addNew()">+ Add New</a></button>
+            <br>
+            <br>
+            <tr>
+                <button ng-click="sortField='-Priority'">High to Low</button>
+                <button ng-click="sortField='Priority'">Low to High</button>
+                <button ng-click="sortField='ToDoText'">Alphabetical</button>
+            </tr>
+        </div>
+        <div class="panel-body">
+            <nav>
+                <ul class="list-group">
+                    <li ng-class="{strike: deleted}" ng-repeat="Todo in vm.ToDoLocal | orderBy: sortField" class="list-group-item">
+                        <button ng-click="vm.delete(Todo.ToDoListEntryId, vm.ToDoLocal.indexOf(Todo))" id="deleteButton" type="button" class="btn btn-default"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                        <span class="badge">{{Todo.Priority}}</span>
+                        <input ng-model="deleted" ng-click="vm.update(Todo.ToDoListEntryId, Todo)" type="checkbox" aria-label="...">{{Todo.ToDoText}}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

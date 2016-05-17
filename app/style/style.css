@@ -1,0 +1,57 @@
+.blueBackground {
+	background-color: blue;
+}
+
+.redBackground {
+	background-color: red;
+}
+
+.greenBackground {
+	background-color: green;
+}
+
+h1 {
+	clear:both;
+	display: inline-block;
+}
+
+#backgroundColorButtons {
+	float:right;
+}
+
+.page-header {
+	padding: 1%;
+	margin-bottom: 0;
+}
+
+#ToDoListTitle {
+	font-size: 2em;
+}
+
+#deleteButton {
+	float: right;
+	border-style: none;
+	color: red;
+	font-weight: bold;
+}
+
+#ToDoList {
+	margin-top: 5%;
+}
+
+#buttonBar {
+	padding: 0;
+	margin: 0 0 0 2%;
+}
+
+nav ul {
+	height:200px;
+}
+
+nav ul {
+	overflow:hidden; overflow-y:scroll;
+}
+
+.strike {
+    text-decoration: line-through;
+}
