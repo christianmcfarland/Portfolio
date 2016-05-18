@@ -1,0 +1,37 @@
+<!--Container holding all elements of this state-->
+<div id="StateContainer" class="col-md-6 col-md-offset-3">
+    
+<!--Panel holding the input elements and results-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h1>Change Calculator</h1>
+        </div>
+        <div class="panel-body">
+
+            <!--This project was originally done in jquery, the id's are there for that reason-->
+            <section id="input">
+                <div id="h2a">How much is due for the sale?
+                    <input ng-model="vm.total"></input>
+                </div>
+                <div id="h2b">How much has the customer given you?
+                    <input ng-model="vm.money"></input>
+                </div>
+                <button ng-click="vm.Calculate()">Calculate</button>
+            </section>
+            <section id="dollarTag">
+                <h3 id="dollars">Dollars</h3>
+                <p id="output">{{vm.dollars}}</p>
+            </section>
+            <section id="changeTags">
+                <h3>Quarters</h3>
+                <p id="output2">{{vm.quarters}}</p>
+                <h3>Dimes</h3>
+                <p id="output3">{{vm.dimes}}</p>
+                <h3>Nickels</h3>
+                <p id="output4">{{vm.nickels}}</p>
+                <h3>Pennies</h3>
+                <p id="output5">{{vm.pennies}}</p>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,7 @@
+<!-- Container to hold all elements of this State -->
 <div id="StateContainer" class="col-md-6 col-md-offset-3 container-fluid">
+    
+    <!--Input form for new ToDo item, hidden until click addNew-->
     <div ng-show="vm.edit" class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Enter ToDo Item and Select Priority</h3>
@@ -9,6 +12,8 @@
                 <div class="input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Priority <span class="caret"></span></button>
                     <ul class="dropdown-menu dropdown-menu-right">
+
+                        <!-- Call function to add ToDo item and pass Prioirity value -->
                         <li><a ng-click="vm.add(3)">Low</a></li>
                         <li><a ng-click="vm.add(2)">Normal</a></li>
                         <li><a ng-click="vm.add(1)">High</a></li>
@@ -17,6 +22,8 @@
             </div>
         </div>
     </div>
+
+    <!--Panel holding the toDo List, addnew button and orderBy buttons-->
     <div class="panel panel-default">
         <div class="panel-heading">
             <div id="ToDoListTitle" class="panel-title">ToDo List</div>

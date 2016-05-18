@@ -18,6 +18,7 @@
         };
         return service;
 
+        //$http GET function 
         function getToDos() {
 
             var defer = $q.defer();
@@ -46,7 +47,7 @@
             return defer.promise;
         }
 
-
+        //$http POST function, data = vm.ToDo 
         function postToDos(data) {
 
             var defer = $q.defer();
@@ -76,6 +77,7 @@
             return defer.promise;
         }
 
+        //$http PUT function, id = ToDoListEntryId, data = Todo in vm.ToDoLocal
         function putToDos(id, data) {
 
             var defer = $q.defer();
@@ -105,6 +107,7 @@
             return defer.promise;
         }
 
+        //$http DELETE function, id = TodoListEntryId
         function deleteToDos(id) {
 
             var defer = $q.defer();

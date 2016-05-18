@@ -27,6 +27,26 @@
                 templateUrl: "app/partials/main.state2.html",
                 controller: "State2Controller as vm"
             })
+            .state('main.state3', {
+                url: "/state3",
+                templateUrl: "app/partials/main.state3.html",
+                controller: "State3Controller as vm"
+            })
+            .state('main.state4', {
+                url: "/state4",
+                templateUrl: "app/partials/main.state4.html",
+                controller: "State4Controller as vm"
+            })
+            .state('main.state5', {
+                url: "/state5",
+                templateUrl: "app/partials/main.state5.html",
+                controller: "State5Controller as vm"
+            })
+            .state('main.state6', {
+                url: "/state6",
+                templateUrl: "app/partials/main.state6.html",
+                controller: "State6Controller as vm"
+            })
            
 })
 

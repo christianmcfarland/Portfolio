@@ -10,18 +10,17 @@
     /* @ngInject */
     function State1Controller($http, $log, $filter, ToDoListFactory) {
         var vm = this;
+        
+        //using vm
         vm.edit = false;
 
         // show entry form when click +Add new
-
         vm.addNew = function() {
             vm.edit = true;
         };
 
 
         // Populate ToDo list from Database upon opening the app
-
-
         vm.activate = function() {
             ToDoListFactory.getToDos().then(
                 function(response) {
@@ -35,15 +34,17 @@
         vm.activate();
 
         // function to Add new ToDo List object to the Database
-
         vm.add = function(num) {
 
             vm.ToDo.Completed = false;
             vm.ToDo.Priority = num;
+
+            //add new ToDo to local array
             vm.ToDoLocal.push(vm.ToDo);
             var data = vm.ToDo;
             console.log(data);
 
+            //post new ToDo to the Database
             ToDoListFactory.postToDos(data).then(
                 function(response) {
                     console.log("Success!");
@@ -53,7 +54,6 @@
                 });
 
             //clear and hide entry form
-
             vm.ToDo = "";
             vm.edit = false;
 

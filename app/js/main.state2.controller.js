@@ -6,8 +6,11 @@
         .controller('State2Controller', State2Controller);
 
     function State2Controller() {
+
+        //using vm
         var vm = this;
 
+        //array of planets, multiplication factor, and image url
         vm.Planets = [
             {Name: 'Sun', Factor: 27.9, Image: 'sun.jpg'},
             {Name: 'Mercury', Factor: 1.19, Image: 'mercury.jpg'},
@@ -22,6 +25,7 @@
             {Name: 'Pluto', Factor: 0.06, Image: 'pluto.jpg'}
         ];
 
+        //Multiply input weight by the selected planets multiplication factor and show the results
         vm.calculate = function(planet) {
           vm.PlanetWeight = planet.Factor * vm.inputWeight;
           vm.Planet = planet;
