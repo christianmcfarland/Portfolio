@@ -38,6 +38,9 @@
 
             //pennies equals the remainder after taking out nickels (5)
             vm.pennies = Math.round(vm.return3 % 5);
+
+            //show results
+            vm.show=true;
         };
     };
 })();

@@ -26,14 +26,14 @@
     <!--Panel holding the toDo List, addnew button and orderBy buttons-->
     <div class="panel panel-default">
         <div class="panel-heading">
-            <div id="ToDoListTitle" class="panel-title">ToDo List</div>
-            <button id="addNew"><a ng-click="vm.addNew()">+ Add New</a></button>
+            <div id="ToDoListTitle" class="panel-title"><h2>ToDo List</h2></div>
+            <button class="btn btn-default" id="addNew" ng-click="vm.addNew()">+ Add New</button>
             <br>
             <br>
             <tr>
-                <button ng-click="sortField='-Priority'">High to Low</button>
-                <button ng-click="sortField='Priority'">Low to High</button>
-                <button ng-click="sortField='ToDoText'">Alphabetical</button>
+                <button class="btn btn-default" ng-click="sortField='-Priority'">High to Low</button>
+                <button class="btn btn-default" ng-click="sortField='Priority'">Low to High</button>
+                <button class="btn btn-default" ng-click="sortField='ToDoText'">Alphabetical</button>
             </tr>
         </div>
         <div class="panel-body">
