@@ -47,6 +47,16 @@
                 templateUrl: "app/partials/main.state6.html",
                 controller: "State6Controller as vm"
             })
+            .state('main.state7', {
+                url: "/state7",
+                templateUrl: "app/partials/main.state7.html",
+                controller: "State7Controller as vm"
+            })
+            .state('main.state7.list', {
+                url: "/list/:movieName",
+                templateUrl: "app/partials/main.state7.list.html",
+                controller: "State7DetailController as vm"
+            })
            
 })
 
