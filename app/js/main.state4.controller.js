@@ -6,7 +6,7 @@
         .controller('State4Controller', State4Controller);
 
     function State4Controller() {
-        
+
         //using vm
         var vm = this;
 
@@ -23,13 +23,13 @@
 
             //quarters equals that remainder divided by 25
             vm.quarters = Math.floor(vm.return1 / 25)
-            
+
             //% returns the remainder after you take out the quarters (25)
             vm.return2 = vm.return1 % 25;
 
             //dimes equals the remainder divided by 10
             vm.dimes = Math.floor(vm.return2 / 10);
-            
+
             //% returns the remainder after taking out dimes (10)
             vm.return3 = vm.return2 % 10;
 
@@ -40,7 +40,7 @@
             vm.pennies = Math.round(vm.return3 % 5);
 
             //show results
-            vm.show=true;
+            vm.show = true;
         };
     };
 })();

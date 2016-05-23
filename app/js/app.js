@@ -57,7 +57,7 @@
                 templateUrl: "app/partials/main.state7.list.html",
                 controller: "State7DetailController as vm"
             })
-           
-})
+
+    })
 
 })();

@@ -1,0 +1,34 @@
+{
+  "name": "12-vstda",
+  "version": "1.0.0",
+  "description": "very simple applications",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-connect": "^4.0.0",
+    "gulp-inject": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-open": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^4.0.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+     "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c-mac88/VerySimpleApplications.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c-mac88/VerySimpleApplications/issues"
+  },
+  "homepage": "https://github.com/c-mac88/VerySimpleApplications#readme"
+}

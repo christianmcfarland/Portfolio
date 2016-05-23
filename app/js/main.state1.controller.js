@@ -9,9 +9,11 @@
 
     /* @ngInject */
     function State1Controller($http, $log, $filter, ToDoListFactory) {
-        var vm = this;
-        
+
         //using vm
+        var vm = this;
+
+        //hide entry form
         vm.edit = false;
 
         // show entry form when click +Add new
