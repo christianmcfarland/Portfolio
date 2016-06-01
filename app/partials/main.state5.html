@@ -1,18 +1,12 @@
 <!--Container holding all elements of this state-->
-<div id="StateContainer" class="col-md-6 col-md-offset-3 container-fluid">
-    <div id="mainPanel" class="panel panel-default">
-        <div class="panel-heading">
-            <h2>Memory Game</h2>
-            <h4>Pick Two</h4>
-        </div>
-        <div class="panel-body">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-2" ng-repeat="card in vm.cards">
-                        <div ng-click="vm.initialClick()" ng-show="card.cardIsFlipped"><img height=100 width=100 src="app/images/{{card.value}}"></div>
-                        <div ng-click="vm.initialClick(card)" ng-hide="card.cardIsFlipped"><img height=100 width=100 src="app/images/card.jpg"></div>
-                    </div>
-                </div>
+<div id="StateContainer" class="col-xs-6 col-xs-offset-3 container">
+    <h2>Memory Game</h2>
+    <h4>Pick Two</h4>
+    <div id="appMain">
+        <div class="row">
+            <div id="memoryGameCard" class="col-xs-2" ng-repeat="card in vm.cards">
+                <div ng-click="vm.initialClick()" ng-show="card.cardIsFlipped"><img height=75px width=75px src="app/images/{{card.value}}"></div>
+                <div ng-click="vm.initialClick(card)" ng-hide="card.cardIsFlipped"><img height=75px width=75px src="app/images/card.jpg"></div>
             </div>
         </div>
     </div>

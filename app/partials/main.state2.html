@@ -1,11 +1,8 @@
 <!--Container holding all elements of this state-->
-<div id="StateContainer" class="col-md-6 col-md-offset-3 container-fluid">
+<div id="StateContainer" class="col-xs-6 col-xs-offset-3 container-fluid">
     <!--Panel holding the input form and results -->
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2>Astro Weight Calculator</h2>
-        </div>
-        <div class="panel-body">
+    <h2>Astro Weight Calculator</h2>
+    <div id="appMain">
             <h4>Enter your weight and select a planet</h4>
             <div class="input-group">
                 <input ng-model="vm.inputWeight" type="text" class="form-control">
@@ -22,6 +19,5 @@
                 <br>
                 <img src=../app/images/{{vm.Planet.Image}}>
             </div>
-        </div>
     </div>
 </div>

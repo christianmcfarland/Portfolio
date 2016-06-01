@@ -38,13 +38,13 @@
         // function to Add new ToDo List object to the Database
         vm.add = function(num) {
 
+            vm.ToDo.UserId = "cec09141-5076-439b-8780-cfa5a7d7f524";
             vm.ToDo.Completed = false;
             vm.ToDo.Priority = num;
 
             //add new ToDo to local array
             vm.ToDoLocal.push(vm.ToDo);
             var data = vm.ToDo;
-            console.log(data);
 
             //post new ToDo to the Database
             ToDoListFactory.postToDos(data).then(

@@ -25,11 +25,11 @@
 
             $http({
                 method: 'GET',
-                url: 'http://localhost:64670/api/ToDoListEntries'
+                url: 'http://localhost:50341/api/ToDoListEntries'
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);
-                        toastr.success('Success!');
+                        toastr.success('Found ToDo List Items!');
                     } else {
                         defer.reject(response);
                         //error if found but empty
@@ -54,12 +54,12 @@
 
             $http({
                 method: 'POST',
-                url: 'http://localhost:64670/api/ToDoListEntries',
+                url: 'http://localhost:50341/api/ToDoListEntries',
                 data: data
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);
-                        toastr.success('Success!');
+                        toastr.success('Added ToDo List Item!');
                     } else {
                         defer.reject(response);
                         //error if found but empty
@@ -84,12 +84,12 @@
 
             $http({
                 method: 'PUT',
-                url: 'http://localhost:64670/api/ToDoListEntries/' + id,
+                url: 'http://localhost:50341/api/ToDoListEntries/' + id,
                 data: data
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);
-                        toastr.success('Successfully updated!');
+                        toastr.success('Updated ToDo List Item!');
                     } else {
                         defer.reject(response);
                         //error if found but empty
@@ -114,11 +114,11 @@
 
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:64670/api/ToDoListEntries/' + id
+                url: 'http://localhost:50341/api/ToDoListEntries/' + id
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);
-                        toastr.success('Success!');
+                        toastr.success('Deleted ToDo List Item!');
                     } else {
                         defer.reject(response);
                         //error if found but empty

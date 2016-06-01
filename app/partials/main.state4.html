@@ -1,42 +1,36 @@
 <!--Container holding all elements of this state-->
-<div id="StateContainer" class="col-md-6 col-md-offset-3">
+<div id="StateContainer" class="col-xs-6 col-xs-offset-3">
     <!--Panel holding the input elements and results-->
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2>Change Calculator</h2>
-        </div>
-        <div class="panel-body">
-            <!--This project was originally done in jquery, the id's are there for that reason-->
-            <div id="input">
-                <h5>How much is due for the sale?</h5>
-                <input class="form-control" ng-model="vm.total"></input>
-                <h5>How much has the customer given you?</h5>
-                <input class="form-control" ng-model="vm.money"></input>
-                <br>
-                <button class="btn btn-default" ng-click="vm.Calculate()">Calculate</button>
+    <h2>Change Calculator</h2>
+    <div id="appMain">
+        <!--This project was originally done in jquery, the id's are there for that reason-->
+            <h5>How much is due for the sale?</h5>
+            <input class="form-control" ng-model="vm.total"></input>
+            <h5>How much has the customer given you?</h5>
+            <input class="form-control" ng-model="vm.money"></input>
+            <br>
+            <button class="btn btn-default" ng-click="vm.Calculate()">Calculate</button>
+        <div ng-show="vm.show" class="container-fluid">
+            <div id="dollarTag">
+                <h3 id="dollars">Dollars</h3>
+                <p id="output">{{vm.dollars}}</p>
             </div>
-            <div ng-show="vm.show" class="container-fluid">
-                <div id="dollarTag">
-                    <h3 id="dollars">Dollars</h3>
-                    <p id="output">{{vm.dollars}}</p>
+            <div id="changeTags">
+                <div class="col-md-3">
+                    <h3>Quarters</h3>
+                    <p>{{vm.quarters}}</p>
                 </div>
-                <div id="changeTags">
-                    <div class="col-md-3">
-                        <h3>Quarters</h3>
-                        <p>{{vm.quarters}}</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Dimes</h3>
-                        <p>{{vm.dimes}}</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Nickels</h3>
-                        <p>{{vm.nickels}}</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>Pennies</h3>
-                        <p>{{vm.pennies}}</p>
-                    </div>
+                <div class="col-md-3">
+                    <h3>Dimes</h3>
+                    <p>{{vm.dimes}}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Nickels</h3>
+                    <p>{{vm.nickels}}</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Pennies</h3>
+                    <p>{{vm.pennies}}</p>
                 </div>
             </div>
         </div>

@@ -1,24 +1,20 @@
 <!--Container holding all elements of this state-->
-<div id="StateContainer" class="col-md-6 col-md-offset-3 container-fluid">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2>Mortgage Calculator</h2>
-        </div>
-        <div class="panel-body">
-            <h4>Calculate your monthly payment</h4>
-            <h5>Loan balance:</h5>
-            <input ng-model="vm.loanBalance" type="text" class="form-control"></input>
-            <h5>Interest rate:</h5>
-            <input ng-model="vm.interestRate" type="text" class="form-control"></input>
-            <h5>Loan term (years):</h5>
-            <input ng-model="vm.loanTerm" type="text" class="form-control"></input>
-            <h5>Period: {{vm.periodName}}</h5>
-            <button ng-click="vm.period=12; vm.periodName='Monthly'" type="button" class="btn btn-default">Monthly</button>
-            <button ng-click="vm.period=6; vm.periodName='Bimonthly'" type="button" class="btn btn-default">Bimonthly</button>
-            <button id="calculateChange" ng-click="vm.Calculate()" type="button" class="btn btn-default">Calculate</button>
-            <br>
-            <div ng-show="vm.show">
-                <h3>You're monthly payments will be: ${{vm.monthlyPaymentFinal}}</h3></div>
-        </div>
+<div id="StateContainer" class="col-xs-6 col-xs-offset-3 container-fluid">
+    <h2>Mortgage Calculator</h2>
+    <div id="appMain">
+        <h4>Calculate your monthly payment</h4>
+        <h5>Loan balance:</h5>
+        <input ng-model="vm.loanBalance" type="text" class="form-control"></input>
+        <h5>Interest rate:</h5>
+        <input ng-model="vm.interestRate" type="text" class="form-control"></input>
+        <h5>Loan term (years):</h5>
+        <input ng-model="vm.loanTerm" type="text" class="form-control"></input>
+        <h5>Period: {{vm.periodName}}</h5>
+        <button ng-click="vm.period=12; vm.periodName='Monthly'" type="button" class="btn btn-default">Monthly</button>
+        <button ng-click="vm.period=6; vm.periodName='Bimonthly'" type="button" class="btn btn-default">Bimonthly</button>
+        <button id="calculateChange" ng-click="vm.Calculate()" type="button" class="btn btn-default">Calculate</button>
+        <br>
+        <div ng-show="vm.show">
+            <h3>You're monthly payments will be: ${{vm.monthlyPaymentFinal}}</h3></div>
     </div>
 </div>

@@ -1,74 +1,174 @@
 /***************************
 index.html
 ****************************/
-.page-header {
-	padding: 1%;
-	margin-bottom: 0;
+
+#funContainer {
+    margin: 0 5% 0 5%;
+    border-radius: 25px;
+    background-color: rgba(0, 128, 128, 0);
+    color: #03357A;
 }
 
-.blueBackground {
-	background-color: blue;
+#welcomeGreeting {
+    text-align: right;
+    margin: 9% 10% 0 0;
+    font-family: 'Patua One', cursive;
+    color: #03357A;
 }
 
-.redBackground {
-	background-color: red;
+#welcomeGreeting button {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    color: #03357A;
 }
 
-.greenBackground {
-	background-color: green;
+#welcomeGreeting li {
+    cursor: pointer;
 }
 
-#backgroundColorButtons {
-	float:right;
+#pageHeader {
+    margin: 2% 2% 0 2%;
 }
 
-h1 {
-	clear:both;
-	display: inline-block;
+#pageTitle {
+    margin-bottom: 0;
+    font-family: 'Righteous', cursive;
+    font-size: 3em;
+    text-shadow: 2px 2px white;
+    display: inline-block;
+    float: left;
+    clear: right;
+    cursor: pointer;
 }
 
+#registerLogin {
+    font-family: 'Patua One', cursive;
+    display: inline-block;
+    float: right;
+    clear: left;
+}
+
+body {
+    background-image: url("/app/images/sunset.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /***************************
-Main State
+Main
 ****************************/
-#buttonBar {
 
+#buttonBar {
+    padding: 2%;
 }
 
+#list {
+    margin: 2%;
+}
+
+#list div {
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#listImage {
+    padding: 1%;
+    display: inline;
+    position: relative;
+}
+
+#listImage img {
+    position: relative;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border: solid 1px #555;
+    /*    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);*/
+}
+
+#list img {
+    box-shadow: -5px 5px #03357A;
+    -moz-box-shadow: -5px 5px rgba(1, 51, 120, 1);
+    -webkit-box-shadow: -5px 5px rgba(1, 51, 120, 1);
+    -o-box-shadow: -5px 5px rgba(1, 51, 120, 1);
+}
+
+#listImage p {
+    position: absolute;
+    color: white;
+    left: 35%;
+    top: 0%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.active {
+    color: orange;
+}
 
 
 /***************************
 All States share this main container style
 ****************************/
+
 #StateContainer {
-	margin-top: 5%;
+    padding: 2%;
+    font-family: 'Righteous', cursive;
+    border-radius: 25px;
 }
 
+#StateContainer {}
+
+#inputRegister {
+    margin: 5px;
+}
+
+.panel {
+    margin: 2%;
+}
+
+
+/***************************
+Register
+****************************/
+
+#submitRegister {
+    margin: 5px;
+}
+
+#atSymbolRegister {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    font-size: 2em;
+    color: black;
+}
 
 
 /***************************
 State 1
 ****************************/
+
 #deleteButton {
-	float: right;
-	border-style: none;
-	color: red;
-	font-weight: bold;
-}
-
-nav ul {
-	height:200px;
-}
-
-nav ul {
-	overflow:hidden; overflow-y:scroll;
+    float: right;
+    border-style: none;
+    color: red;
+    font-weight: bold;
 }
 
 .strike {
     text-decoration: line-through;
 }
 
+#ToDoPriorityList {
+    cursor: pointer;
+}
 
 
 /***************************
@@ -84,81 +184,169 @@ State 3
 /***************************
 State 4
 ****************************/
+
 #calculateChange {
-	float:right;
+    float: right;
 }
 
 #dollarTag {
-	text-align: center;
+    text-align: center;
 }
 
 #changeTags {
-	display: inline;
+    display: inline;
 }
-
 
 
 /***************************
 State 5
 ****************************/
 
+#memoryGameCard img {
+    border-radius: 15px;
+    margin: 1%;
+}
 
 
 /***************************
 State 6
 ****************************/
+
 #jumbo {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
 #leftContain,
 #rightContain {
-  margin-top: 2%;
+    margin-top: 2%;
 }
 
 #leftContain {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 #rightContain {
-  padding-right: 0;
+    padding-right: 0;
 }
 
-
 .top {
-  padding-top: 15px;
-  padding-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 0px;
 }
 
 .titles {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .datas {
-  font-weight: 900;
-  color: #316E32;
-  font-size: 1.25em;
+    font-weight: 900;
+    color: #316E32;
+    font-size: 1.25em;
 }
 
 .titles2 {
-  font-weight: 900;
-  padding-top: 50px;
+    font-weight: 900;
+    padding-top: 50px;
 }
 
 .cityDisplay,
 {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .latDisplay {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 
+/***************************
+State 7
+****************************/
 
 
+/***************************
+State 8
+****************************/
+
+#chirperLogout {
+    cursor: pointer;
+}
+
+#navBrand {
+    font-family: 'Righteous', cursive;
+    cursor: none;
+    color: lightblue;
+}
+
+#teardropButton {
+    padding: 15px;
+}
+
+#chirperHome {
+    margin: 2%;
+}
+
+#atName {
+    cursor: default;
+}
+
+#postDate {
+    float: right;
+}
+
+#leftDiv {
+    padding: 0px;
+    display: inline;
+    position: relative;
+}
+
+#leftDiv h2 {
+    position: absolute;
+    color: black;
+    left: 7%;
+    top: 25%;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid 4px white;
+    padding: 15px 15px 5px 15px;
+    background-color: #6699cc;
+}
+
+#middleDiv {
+    padding: 0px;
+}
+
+#rightDiv {
+    padding: 0px;
+}
+
+#dieMargin {
+    margin: 5px;
+}
+
+#commentTime {
+    float: right;
+}
+
+#nameTag {
+    float: right;
+}
+
+#nameTag p {
+    font-size: .7em;
+}
 
 
+#nameTagHeading {
+    background-color: #6699cc;
+    padding:40px;
+}
 
+#chirperHome .panel {
+    border-style: none;
+}
 
-
+#chirperHome td {
+    font-size: .7em;
+}

@@ -1,13 +1,40 @@
-<!-- Eeach simple application is in a different state, linked here with ui-sref -->
-<div id="buttonBar">
-    <div class="btn-group" role="group" aria-label="...">
-        <button ui-sref-active="active" ui-sref="main.state1" type="button" class="btn btn-default">ToDo List</button>
-        <button ui-sref-active="active" ui-sref="main.state2" type="button" class="btn btn-default">AstroWeight</button>
-        <button ui-sref-active="active" ui-sref="main.state3" type="button" class="btn btn-default">Mortgage Calculator</button>
-        <button ui-sref-active="active" ui-sref="main.state4" type="button" class="btn btn-default">Change Calculator</button>
-        <button ui-sref-active="active" ui-sref="main.state5" type="button" class="btn btn-default">Memory Game</button>
-        <button ui-sref-active="active" ui-sref="main.state6" type="button" class="btn btn-default">Weather App</button>
-        <button ui-sref-active="active" ui-sref="main.state7" type="button" class="btn btn-default">Movie Finder</button>
+<div id="funContainer" class="container-fluid">
+    <div id="pageHeader" class="container-fluid">
+        <div ui-sref="main" id="pageTitle">C-Mac</div>
+    </div>
+    <div class="col-xs-12" id="list">
+        <div ui-sref-active="active" ui-sref="main.state1" id="listImage">
+            <img width=75px height=75px src="app/images/todo.jpg">
+            <p><span class="glyphicon glyphicon-tasks"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state2" id="listImage">
+            <img width=75px height=75px src="app/images/astro.jpeg">
+            <p><span class="glyphicon glyphicon-globe"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state3" id="listImage">
+            <img width=75px height=75px src="app/images/mortgage.jpg">
+            <p><span class="glyphicon glyphicon-pencil"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state4" id="listImage">
+            <img width=75px height=75px src="app/images/change.jpg">
+            <p><span class="glyphicon glyphicon-usd"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state5" id="listImage">
+            <img width=75px height=75px src="app/images/memory.jpg">
+            <p><span class="glyphicon glyphicon-th"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state6" id="listImage">
+            <img width=75px height=75px src="app/images/weather.jpg">
+            <p><span class="glyphicon glyphicon-cloud"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="main.state7" id="listImage">
+            <img width=75px height=75px src="app/images/movie.jpg">
+            <p><span class="glyphicon glyphicon-film"></span></p>
+        </div>
+        <div ui-sref-active="active" ui-sref="state8" id="listImage">
+            <img width=75px height=75px src="app/images/chirp.jpg">
+            <p><span class="glyphicon glyphicon-leaf"></span></p>
+        </div>
     </div>
 </div>
-<div ui-view></div>
+<div ui-view autoscroll></div>
