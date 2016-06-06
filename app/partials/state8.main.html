@@ -30,7 +30,7 @@
         <div id="dieMargin" class="panel panel-default">
             <div class="panel-heading">
                 <div class="input-group">
-                    <input ng-model="vm.Post.Text" type="text" class="form-control" placeholder="What's the word?">
+                    <input ng-model="vm.Post.Text" type="text" class="form-control" placeholder="New Post">
                     <span class="input-group-btn"><button ng-click="vm.addChirp()" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                     </span>
                 </div>
@@ -38,20 +38,22 @@
             <!--Panel holding the toDo List, addnew button and orderBy buttons-->
             <div class="panel-body">
                 <nav>
-                    <ul class="list-group">
-                        <li ng-repeat="chirp in vm.Chirps" class="list-group-item">
-                            <h5 ng-mouseenter="vm.hovering=true" ng-mouseleave="vm.hovering=false" id="atName">
-                            <b>{{chirp.FirstName}} {{chirp.LastName}}</b> @{{chirp.DisplayName}} | {{chirp.CreatedDate}}<small id="postDate" ng-show="vm.hovering">{{chirp.CreatedTime}}</small></h5>
+                    <ul ng-repeat="chirp in vm.Chirps" class="list-group">
+                        <li ng-mouseenter="vm.hovering=true" ng-mouseleave="vm.hovering=false" class="list-group-item">
+                            <h5 id="atName">
+                            <b>{{chirp.FirstName}} {{chirp.LastName}}</b> @{{chirp.DisplayName}} | {{chirp.CreatedDate}}<small id="postDate" ng-show="vm.hovering">{{chirp.CreatedTime}} <button ng-click="vm.deleteChirp(chirp.PostId)">X</button></small></h5>
                             <h5>{{chirp.Text}}</h5>
                             <hr>
-                            <h6 ng-mouseenter="vm.hovering1=true" ng-mouseleave="vm.hovering1=false" ng-repeat="comment in chirp.Comments">
-                                <b>@{{comment.DisplayName}}</b> {{comment.Text}}
-                                <small ng-show="vm.hovering1" id="commentTime">{{comment.CreatedDate}}{{comment.CreatedTime}}</small>
+                            <div ng-show="vm.hovering">
+                                <h6 ng-mouseenter="vm.hovering1=true" ng-mouseleave="vm.hovering1=false" ng-repeat="comment in chirp.User.Comments">
+                                <b id="comment">@{{comment.DisplayName}}</b> {{comment.Text}}
+                                <small ng-show="vm.hovering1" id="commentTime">{{comment.CreatedDate}}  {{comment.CreatedTime}} <button ng-click="vm.deleteComment(comment.CommentID)">X</button></small>
                             </h6>
-                            <div class="input-group">
-                                <input ng-model="vm.Comment.Text" type="text" class="form-control" placeholder="Comment">
-                                <span class="input-group-btn"><button ng-click="vm.addComment(chirp.PostId)" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-                                </span>
+                                <div id="newComment" class="input-group">
+                                    <input ng-model="vm.Comment.Text" type="text" class="form-control" placeholder="Comment">
+                                    <span class="input-group-btn"><button ng-click="vm.addComment(chirp.PostId)" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -60,10 +62,10 @@
         </div>
     </div>
     <div id="rightDiv" class="col-xs-3 container">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                Panel content
-            </div>
+        <div ng-if="bool" class="fade">
+            Fade me in out
         </div>
+        <button ng-click="bool=true">Fade In!</button>
+        <button ng-click="bool=false">Fade Out!</button>
     </div>
 </div>

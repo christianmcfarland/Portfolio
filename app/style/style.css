@@ -337,10 +337,9 @@ State 8
     font-size: .7em;
 }
 
-
 #nameTagHeading {
     background-color: #6699cc;
-    padding:40px;
+    padding: 40px;
 }
 
 #chirperHome .panel {
@@ -349,4 +348,27 @@ State 8
 
 #chirperHome td {
     font-size: .7em;
+}
+
+#comment {
+    padding-left: 15px;
+}
+
+#newComment {
+    margin-left: 25px;
+}
+
+
+/* The starting CSS styles for the enter animation */
+
+.fade.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+
+/* The finishing CSS styles for the enter animation */
+
+.fade.ng-enter.ng-enter-active {
+    opacity: 1;
 }

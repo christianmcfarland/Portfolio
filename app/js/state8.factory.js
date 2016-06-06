@@ -115,7 +115,7 @@
 
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:50341/api/Posts' + id
+                url: 'http://localhost:50341/api/Posts/' + id
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);
@@ -173,7 +173,7 @@
 
             $http({
                 method: 'DELETE',
-                url: 'http://localhost:50341/api/Posts' + id
+                url: 'http://localhost:50341/api/Comments/' + id
             }).then(function(response) {
                     if (typeof response.data === 'object') {
                         defer.resolve(response);

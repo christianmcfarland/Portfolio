@@ -1,0 +1,43 @@
+<div class="col-xs-8 col-xs-offset-2">
+    <h2>ToDo List</h2>
+    <!--Input form for new ToDo item, hidden until click addNew-->
+    <div id="appMain" ng-show="vm.editToDo">
+        <h3>Enter ToDo Item and Select Priority</h3>
+        <div class="input-group">
+            <input ng-model="vm.ToDo.Text" type="text" class="form-control">
+            <div class="input-group-btn">
+                <button type="button" class="btnf btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Priority <span class="caret"></span></button>
+                <ul id="ToDoPriorityList" class="dropdown-menu dropdown-menu-right">
+                    <!-- Call function to add ToDo item and pass Prioirity value -->
+                    <li><a ng-click="vm.addToDo(3)">Low</a></li>
+                    <li><a ng-click="vm.addToDo(2)">Normal</a></li>
+                    <li><a ng-click="vm.addToDo(1)">High</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Panel holding the toDo List, addnew button and orderBy buttons-->
+    <div id="appMain">
+        <div>
+            <button ng-hide="vm.editToDo" class="btn btn-default" id="addNew" ng-click="vm.addNewToDo()">+ Add New</button>
+            <br>
+            <br>
+            <tr>
+                <button class="btn btn-default" ng-click="sortField='Priority'">High to Low</button>
+                <button class="btn btn-default" ng-click="sortField='-Priority'">Low to High</button>
+                <button class="btn btn-default" ng-click="sortField='ToDoText'">Alphabetical</button>
+            </tr>
+        </div>
+        <div>
+            <nav>
+                <ul class="list-group">
+                    <li ng-class="{strike: completed}" ng-repeat="Todo in vm.ToDoLocal | orderBy: sortField" class="list-group-item">
+                        <button ng-click="vm.deleteToDo(Todo.ToDoListEntryId, vm.ToDoLocal.indexOf(Todo))" id="deleteButton" type="button" class="btn btn-default"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                        <span class="badge">{{Todo.Priority}}</span>
+                        <input ng-model="completed" ng-click="vm.updateToDo(Todo.ToDoListEntryId, Todo)" type="checkbox" aria-label="...">{{Todo.Text}}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

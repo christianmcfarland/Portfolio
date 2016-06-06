@@ -75,13 +75,15 @@
                 url: "/main",
                 templateUrl: "app/partials/state8.main.html"
             })
+            .state("state8.todo", {
+                url: "/todo",
+                templateUrl: "app/partials/state8.todo.html"
+            })
 
         $httpProvider.interceptors.push('authInterceptor');
     })
 
     //
     app.value('apiUrl', 'http://localhost:50341/api/');
-
-
 
 })();

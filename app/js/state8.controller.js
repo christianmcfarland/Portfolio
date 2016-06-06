@@ -5,26 +5,32 @@
         .module('app')
         .controller('State8Controller', State8Controller);
 
-    State8Controller.$inject = ['localStorageService', '$state', 'authService', 'ChirperFactory', '$log'];
+    State8Controller.$inject = ['$filter', 'ToDoListFactory', 'localStorageService', '$state', 'authService', 'ChirperFactory', '$log'
+    ];
 
 
 
     /* @ngInject */
-    function State8Controller(localStorageService, $state, authService, ChirperFactory, $log) {
+    function State8Controller($filter, ToDoListFactory, localStorageService, $state, authService, ChirperFactory, $log) {
         //using vm
         var vm = this;
 
         //hide entry form
         vm.edit = false;
+        vm.editToDo = false;
 
-        vm.hovering=false;
-        vm.hovering1=false;
+        vm.hovering = false;
+        vm.hovering1 = false;
 
 
 
         // show entry form when click +Add new
         vm.addNew = function() {
             vm.edit = true;
+        };
+
+        vm.addNewToDo = function() {
+            vm.editToDo = true;
         };
 
         vm.logout = function() {
@@ -46,6 +52,18 @@
             }
         }
 
+        function activateToDos() {
+            ToDoListFactory.getToDos().then(
+                function(response) {
+                    vm.ToDoLocal = response.data;
+                },
+                function(error) {
+                    $log.error(error);
+                })
+        };
+
+        activateToDos();
+
 
         // Populate Chirp Feed from Database upon opening the app
         function populateFeed() {
@@ -59,6 +77,32 @@
                 })
         };
 
+        // function to Add new ToDo List object to the Database
+        vm.addToDo = function(num) {
+
+            vm.ToDo.DisplayName = vm.name;
+            vm.ToDo.FirstName = vm.firstName;
+            vm.ToDo.LastName = vm.lastName;
+            vm.ToDo.Completed = false;
+            vm.ToDo.Priority = num;
+
+            //add new ToDo to local array
+            var data = vm.ToDo;
+
+            //post new ToDo to the Database
+            ToDoListFactory.postToDos(data).then(
+                function(response) {
+                    console.log("Success!");
+                    vm.ToDoLocal.push(response.data);
+                },
+                function(error) {
+                    $log.error(error);
+                });
+
+            //clear and hide entry form
+            vm.ToDo = "";
+            vm.editToDo = false;
+        };
 
 
 
@@ -88,21 +132,6 @@
 
         };
 
-        // //function to update an item in the database that you have "completed"
-        // vm.update = function(id, data) {
-
-        //     data.Completed = !data.Completed;
-        //     console.log(data);
-
-        //     ToDoListFactory.putToDos(id, data).then(
-        //         function(response) {
-        //             console.log("Updated successfully!");
-        //         },
-        //         function(error) {
-        //             $log.error(error);
-        //         });
-
-        // }
 
 
 
@@ -112,6 +141,7 @@
             ChirperFactory.deleteChirp(id).then(
                 function(response) {
                     console.log("Deleted successfully!");
+                    populateFeed();
                 },
                 function(error) {
                     $log.error(error);
@@ -122,7 +152,9 @@
         //function to Add new ToDo List object to the Database
         vm.addComment = function(id) {
 
-
+            vm.Comment.DisplayName = vm.name;
+            vm.Comment.FirstName = vm.firstName;
+            vm.Comment.LastName = vm.lastName;
             vm.Comment.PostId = id;
 
             var data = vm.Comment;
@@ -149,6 +181,7 @@
             ChirperFactory.deleteComment(id).then(
                 function(response) {
                     console.log("Deleted successfully!");
+                    populateFeed();
                 },
                 function(error) {
                     $log.error(error);
@@ -157,6 +190,54 @@
         }
 
 
+
+
+        //function to update an item in the database that you have "completed"
+        vm.update = function(id, data) {
+
+            data.Completed = !data.Completed;
+            console.log(data);
+
+            ToDoListFactory.putToDos(id, data).then(
+                function(response) {
+                    console.log("Updated successfully!");
+                },
+                function(error) {
+                    $log.error(error);
+                });
+
+        }
+
+        //function to update an item in the database that you have "completed"
+        vm.updateToDo = function(id, data) {
+
+            data.Completed = !data.Completed;
+            console.log(data);
+
+            ToDoListFactory.putToDos(id, data).then(
+                function(response) {
+                    console.log("Updated successfully!");
+                },
+                function(error) {
+                    $log.error(error);
+                });
+
+        }
+
+        //delete an item from the list local and on database
+        vm.deleteToDo = function(id, index) {
+
+            vm.ToDoLocal.splice(index, 1);
+
+            ToDoListFactory.deleteToDos(id).then(
+                function(response) {
+                    console.log("Deleted successfully!");
+                },
+                function(error) {
+                    $log.error(error);
+                });
+
+        }
 
 
 

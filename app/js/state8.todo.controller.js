@@ -3,12 +3,12 @@
 
     angular
         .module('app')
-        .controller('State1Controller', State1Controller);
+        .controller('ToDoController', ToDoController);
 
-    State1Controller.$inject = ["$http", "$log", "$filter", "ToDoListFactory"];
+    ToDoController.$inject = ["$http", "$log", "$filter", "ToDoListFactory"];
 
     /* @ngInject */
-    function State1Controller($http, $log, $filter, ToDoListFactory) {
+    function ToDoController($http, $log, $filter, ToDoListFactory) {
 
         //using vm
         var vm = this;
@@ -23,7 +23,7 @@
 
 
         // Populate ToDo list from Database upon opening the app
-        vm.activate = function() {
+        vm.activateToDos = function() {
             ToDoListFactory.getToDos().then(
                 function(response) {
                     vm.ToDoLocal = response.data;
@@ -33,7 +33,7 @@
                 })
         };
 
-        vm.activate();
+        vm.activateToDos();
 
         // function to Add new ToDo List object to the Database
         vm.add = function(num) {
@@ -43,7 +43,6 @@
             vm.ToDo.Priority = num;
 
             //add new ToDo to local array
-            vm.ToDoLocal.push(vm.ToDo);
             var data = vm.ToDo;
 
             //post new ToDo to the Database
@@ -58,6 +57,7 @@
             //clear and hide entry form
             vm.ToDo = "";
             vm.edit = false;
+            vm.activate();
 
         };
 
