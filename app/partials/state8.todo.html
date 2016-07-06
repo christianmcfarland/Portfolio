@@ -25,7 +25,7 @@
             <tr>
                 <button class="btn btn-default" ng-click="sortField='Priority'">High to Low</button>
                 <button class="btn btn-default" ng-click="sortField='-Priority'">Low to High</button>
-                <button class="btn btn-default" ng-click="sortField='ToDoText'">Alphabetical</button>
+                <button class="btn btn-default" ng-click="sortField='ToDo.Text'">Alphabetical</button>
             </tr>
         </div>
         <div>
@@ -34,7 +34,7 @@
                     <li ng-class="{strike: completed}" ng-repeat="Todo in vm.ToDoLocal | orderBy: sortField" class="list-group-item">
                         <button ng-click="vm.deleteToDo(Todo.ToDoListEntryId, vm.ToDoLocal.indexOf(Todo))" id="deleteButton" type="button" class="btn btn-default"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                         <span class="badge">{{Todo.Priority}}</span>
-                        <input ng-model="completed" ng-click="vm.updateToDo(Todo.ToDoListEntryId, Todo)" type="checkbox" aria-label="...">{{Todo.Text}}
+                        <input ng-model="completed" ng-click="completed=!completed" type="checkbox" aria-label="...">{{Todo.Text}}
                     </li>
                 </ul>
             </nav>
