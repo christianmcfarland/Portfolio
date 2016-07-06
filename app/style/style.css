@@ -59,6 +59,11 @@ body {
 Main
 ****************************/
 
+#pageHeader {
+    font-family: 'Righteous', cursive;
+    cursor: pointer;
+}
+
 #buttonBar {
     padding: 2%;
 }

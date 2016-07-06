@@ -12,8 +12,6 @@
         var vm = this;
         vm.title = 'LoginController';
 
-        authService.init()
-
         vm.login = function() {
 
 

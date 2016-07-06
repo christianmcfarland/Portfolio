@@ -5,10 +5,10 @@
         .module('app')
         .factory('ChirperFactory', ChirperFactory); // https://docs.angularjs.org/guide/services
 
-    ChirperFactory.$inject = ['$http', '$log', '$q']; // https://github.com/johnpapa/angular-styleguide/tree/master/a1#manual-annotating-for-dependency-injection
+    ChirperFactory.$inject = ['$http', '$log', '$q', 'toastr']; // https://github.com/johnpapa/angular-styleguide/tree/master/a1#manual-annotating-for-dependency-injection
 
     /* @ngInject */
-    function ChirperFactory($http, $log, $q) {
+    function ChirperFactory($http, $log, $q, toastr) {
 
         var service = {
             getChirps: getChirps,
