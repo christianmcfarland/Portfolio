@@ -49,7 +49,7 @@ index.html
 }
 
 body {
-    background-image: url("app/images/sunset.jpeg");
+    background-image: url("../images/sunset.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
