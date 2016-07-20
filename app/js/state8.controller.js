@@ -109,12 +109,12 @@
             "FirstName": "John",
             "LastName": "Doe",
             "DisplayName": "jdoe88",
-            "Text": "This is what I have to say!"
+            "Text": "To get back, press the Chirp button in the top right corner of the screen!"
         }, {
             "FirstName": "John",
             "LastName": "Doe",
             "DisplayName": "jdoe88",
-            "Text": "This is what I have to say!"
+            "Text": "I began to replicate Twitter as closely as possible for this project."
         }]
 
 
