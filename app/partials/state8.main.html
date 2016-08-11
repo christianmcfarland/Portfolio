@@ -41,13 +41,13 @@
                     <ul ng-repeat="chirp in vm.Chirps" class="list-group">
                         <li ng-mouseenter="vm.hovering=true" ng-mouseleave="vm.hovering=false" class="list-group-item">
                             <h5 id="atName">
-                            <b>{{chirp.FirstName}} {{chirp.LastName}}</b> @{{chirp.DisplayName}} | {{chirp.CreatedDate}}<small id="postDate" ng-show="vm.hovering">{{chirp.CreatedTime}} <button ng-click="vm.deleteChirp(chirp.PostId)">X</button></small></h5>
+                            <b>{{chirp.FirstName}} {{chirp.LastName}}</b> @{{chirp.DisplayName}} | July 6, 2016<small id="postDate" ng-show="vm.hovering">2:30pm <button ng-click="vm.deleteChirp(chirp.PostId)">X</button></small></h5>
                             <h5>{{chirp.Text}}</h5>
                             <hr>
                             <div ng-show="vm.hovering">
-                                <h6 ng-mouseenter="vm.hovering1=true" ng-mouseleave="vm.hovering1=false" ng-repeat="comment in chirp.User.Comments">
+                                <h6 ng-mouseenter="vm.hovering1=true" ng-mouseleave="vm.hovering1=false" ng-repeat="comment in vm.Comments">
                                 <b id="comment">@{{comment.DisplayName}}</b> {{comment.Text}}
-                                <small ng-show="vm.hovering1" id="commentTime">{{comment.CreatedDate}}  {{comment.CreatedTime}} <button ng-click="vm.deleteComment(comment.CommentID)">X</button></small>
+                                <small ng-show="vm.hovering1" id="commentTime">July 7, 2016  4:45pm <button ng-click="vm.deleteComment(comment.CommentID)">X</button></small>
                             </h6>
                                 <div id="newComment" class="input-group">
                                     <input ng-model="vm.Comment.Text" type="text" class="form-control" placeholder="Comment">
