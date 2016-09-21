@@ -27,7 +27,7 @@ gulp.task('connect', function() {
 gulp.task('app', function(){
    var options = {
        uri: 'http://localhost:8080',
-       app: 'chrome'
+       app: 'google chrome'
    };
    gulp.src('./index.html')
        .pipe(open(options));
