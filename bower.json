@@ -19,6 +19,7 @@
     "moment": "^2.13.0",
     "angular-toastr": "^1.7.0",
     "angular-animate": "^1.5.5",
-    "toastr": "^2.1.2"
+    "toastr": "^2.1.2",
+    "seiyria-bootstrap-slider": "^9.2.0"
   }
 }

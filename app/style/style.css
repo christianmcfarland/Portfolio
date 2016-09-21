@@ -10,3 +10,12 @@ button {
 #calcList {
     margin-top: 2%;
 }
+
+#ex1Slider .slider-selection {
+    background: #BABABA;
+}
+
+#sliderContainer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
