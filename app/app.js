@@ -7,7 +7,7 @@
     // additional configuration goes here
     app.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         // For any unmatched url, redirect to /main
-        $urlRouterProvider.otherwise("main");
+        $urlRouterProvider.otherwise("home");
         // Now set up the states
         $stateProvider
             .state("register", {
@@ -20,44 +20,44 @@
                 templateUrl: "app/8Chirper/login.html",
                 controller: "LoginController as login"
             })
-            .state("main", {
-                url: "/main",
-                templateUrl: "app/Main/main.html",
-                controller: "MainController as vm"
+            .state("home", {
+                url: "/home",
+                templateUrl: "app/Home/home.html",
+                controller: "HomeController as vm"
             })
-            .state("main.state2", {
+            .state("home.state2", {
                 url: "/state2",
-                templateUrl: "app/2AstroCalc/main.state2.html",
+                templateUrl: "app/2AstroCalc/home.state2.html",
                 controller: "State2Controller as vm"
             })
-            .state("main.state3", {
+            .state("home.state3", {
                 url: "/state3",
-                templateUrl: "app/3MortgageCalc/main.state3.html",
+                templateUrl: "app/3MortgageCalc/home.state3.html",
                 controller: "State3Controller as vm"
             })
-            .state("main.state4", {
+            .state("home.state4", {
                 url: "/state4",
-                templateUrl: "app/4ChangeCalc/main.state4.html",
+                templateUrl: "app/4ChangeCalc/home.state4.html",
                 controller: "State4Controller as vm"
             })
-            .state("main.state5", {
+            .state("home.state5", {
                 url: "/state5",
-                templateUrl: "app/5MemoryGame/main.state5.html",
+                templateUrl: "app/5MemoryGame/home.state5.html",
                 controller: "State5Controller as vm"
             })
-            .state("main.state6", {
+            .state("home.state6", {
                 url: "/state6",
-                templateUrl: "app/6WeatherApp/main.state6.html",
+                templateUrl: "app/6WeatherApp/home.state6.html",
                 controller: "State6Controller as vm"
             })
-            .state("main.state7", {
+            .state("home.state7", {
                 url: "/state7",
-                templateUrl: "app/7MovieFinder/main.state7.html",
+                templateUrl: "app/7MovieFinder/home.state7.html",
                 controller: "State7Controller as vm"
             })
-            .state("main.state7.list", {
+            .state("home.state7.list", {
                 url: "/list/:movieName",
-                templateUrl: "app/7MovieFinder/main.state7.list.html",
+                templateUrl: "app/7MovieFinder/home.state7.list.html",
                 controller: "State7DetailController as vm"
             })
             .state("state8", {
