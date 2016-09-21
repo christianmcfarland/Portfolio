@@ -22,9 +22,22 @@
         <button ng-repeat="example in vm.examples" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">
             {{example}}
         </button>
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calculatorModal">
+        <button type="button" class="btn btn-primary btn-lg" ui-sref="home" ng-click="vm.trueistrue = !vm.trueistrue">
             CALCULATORS
         </button>
+        <div ng-if="vm.trueistrue" class="row" id="calcList">
+            <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state2" id="listImage">
+                <p><span class="glyphicon glyphicon-globe"></span></p>
+            </a>
+            <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state3" id="listImage">
+                <p><span class="glyphicon glyphicon-pencil"></span></p>
+            </a>
+            <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state4" id="listImage">
+                <p><span class="glyphicon glyphicon-usd"></span></p>
+            </a>
+            </a>
+        </div>
+        <div ui-view></div>
     </div>
     <div id="opinionColumn" class="col col-xs-12 col-md-4 col-md-offset-4 text-center">
         <h3>BLOG</h3>
@@ -64,33 +77,6 @@ MODALS
                 <a onclick="window.open('http://www.origincodeacademy.com', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');">www.origincodeacademy.com</a>
             </div>
             <div ui-view autoscroll></div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="calculatorModal" tabindex="-1" role="dialog" aria-labelledby="calculatorModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="calculatorModal">Calculate your change, your weight on Mars, and your monthly mortgage payment</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row" id="list">
-                    <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state2" id="listImage">
-                        <p><span class="glyphicon glyphicon-globe"></span></p>
-                    </a>
-                    <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state3" id="listImage">
-                        <p><span class="glyphicon glyphicon-pencil"></span></p>
-                    </a>
-                    <a class="col col-xs-4 text-center" ui-sref-active="active" ui-sref="home.state4" id="listImage">
-                        <p><span class="glyphicon glyphicon-usd"></span></p>
-                    </a>
-                    </a>
-                </div>
-            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>

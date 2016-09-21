@@ -19,5 +19,9 @@
 
         vm.examples = ["Adventure Pass", "AngularJS Projects", "Chirper", "Loop Scheduler", "Super Joe Campers"]
 
+        vm.trueistrue = false;
+
+
+
     }
 })();
