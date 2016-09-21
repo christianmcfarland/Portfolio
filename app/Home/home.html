@@ -5,13 +5,13 @@
     </div>
 </div>
 <div id="titleRow" class="row">
-    <div class="col col-xs-12 col-md-4 text-center">
+    <div id="educationColumn" class="col col-xs-12 col-md-4 text-center">
         <h3>EDUCATION</h3>
         <button ng-repeat="education in vm.educations" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#educationModal">
             {{education}}
         </button>
     </div>
-    <div class="col col-xs-12 col-md-4 text-center">
+    <div id="experiemceColumn" class="col col-xs-12 col-md-4 text-center">
         <h3>EXPERIENCE</h3>
         <button ng-repeat="experience in vm.experiences" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#experienceModal">
             {{experience}}
@@ -49,7 +49,6 @@ MODALS
                 <a onclick="window.open('http://www.origincodeacademy.com', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');">www.origincodeacademy.com</a> </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
@@ -67,7 +66,6 @@ MODALS
             <div ui-view autoscroll></div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
@@ -95,7 +93,6 @@ MODALS
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

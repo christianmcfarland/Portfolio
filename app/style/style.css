@@ -1,16 +1,8 @@
-#educationList {
-    list-style: none;
-    text-align: left;
+body {
+    margin: 2%;
 }
 
-#experienceList {
-    list-style: none;
-    text-align: left;
+button {
+    width: 100%;
+    margin: 2%;
 }
-
-#examplesList {
-    list-style: none;
-    text-align: left;
-}
-
-
