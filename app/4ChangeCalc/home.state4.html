@@ -11,24 +11,25 @@
             <br>
             <button class="btn btn-default" ng-click="vm.Calculate()">Calculate</button>
         <div ng-show="vm.show" class="container-fluid">
-            <div id="dollarTag">
+        <h2>Change:</h2>
+            <div id="dollarTag" class="text-center">
                 <h3 id="dollars">Dollars</h3>
                 <p id="output">{{vm.dollars}}</p>
             </div>
             <div id="changeTags">
-                <div class="col-md-3">
+                <div class="col-xs-12 col-md-3">
                     <h3>Quarters</h3>
                     <p>{{vm.quarters}}</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xs-12 col-md-3">
                     <h3>Dimes</h3>
                     <p>{{vm.dimes}}</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xs-12 col-md-3">
                     <h3>Nickels</h3>
                     <p>{{vm.nickels}}</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-xs-12 col-md-3">
                     <h3>Pennies</h3>
                     <p>{{vm.pennies}}</p>
                 </div>

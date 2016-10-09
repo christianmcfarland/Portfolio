@@ -1,10 +1,10 @@
 <!--Container holding all elements of this state-->
-<div id="StateContainer" class="col-md-10 col-md-offset-1 container-fluid">
+<div id="StateContainer" class="container-fluid text-center">
     <h2>Weather App</h2>
     <div id="appMain">
         <div class="container-fluid">
             <p>Always know if you need an umbrella</p>
-            <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group">
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('sandiego')">San Diego</button>
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('newyork')">New York</button>
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('washingtondc')">Washington D.C.</button>
@@ -17,7 +17,7 @@
                         <button class="btn btn-default" type="button" ng-click="vm.format()">Go!</button>
                       </span>
             </div>
-            <div id="leftContain" class="col-md-6">
+            <div id="leftContain" class="col-xs-12 col-md-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">City Information</h3>
@@ -30,29 +30,29 @@
                         </div>
                         <hr>
                         <div class="row bottom titles">
-                            <div class="col-md-4">Temperature (°F)</div>
-                            <div class="col-md-4">Pressure</div>
-                            <div class="col-md-4">Humidity</div>
+                            <div class="col-xs-12 col-md-4">Temperature (°F)</div>
+                            <div class="col-xs-12 col-md-4">Pressure</div>
+                            <div class="col-xs-12 col-md-4">Humidity</div>
                         </div>
                         <div class="row bottom datas">
-                            <div class="col-md-4">{{vm.weather.main.temp}}°F</div>
-                            <div class="col-md-4">{{vm.weather.main.pressure}}</div>
-                            <div class="col-md-4">{{vm.weather.main.humidity}}%</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.main.temp}}°F</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.main.pressure}}</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.main.humidity}}%</div>
                         </div>
                         <div class="row bottom titles titles2">
-                            <div class="col-md-4">Lowest Temp (°F)</div>
-                            <div class="col-md-4">Highest Temp (°F)</div>
-                            <div class="col-md-4">Wind Speed</div>
+                            <div class="col-xs-12 col-md-4">Lowest Temp (°F)</div>
+                            <div class="col-xs-12 col-md-4">Highest Temp (°F)</div>
+                            <div class="col-xs-12 col-md-4">Wind Speed</div>
                         </div>
                         <div class="row bottom datas">
-                            <div class="col-md-4">{{vm.weather.main.temp_min}}°F</div>
-                            <div class="col-md-4">{{vm.weather.main.temp_max}}°F</div>
-                            <div class="col-md-4">{{vm.weather.wind.speed}}MPH</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.main.temp_min}}°F</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.main.temp_max}}°F</div>
+                            <div class="col-xs-12 col-md-4">{{vm.weather.wind.speed}}MPH</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="rightContain" class="col-md-6">
+            <div id="rightContain" class="col-xs-12 col-md-6">
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">Search History</h3>
