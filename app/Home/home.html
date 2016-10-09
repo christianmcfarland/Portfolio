@@ -1,13 +1,14 @@
-<h1 class="text-center">Christian McFarland, Portfolio</h1>
+<h1 class="text-center">Christian McFarland</h1>
+<h2 class="text-center">AngularJS Portfolio</h2>
 <div id="menuBar" class="row text-center">
     <div class="col-xs-12 col-md-2 col-md-offset-2">
-        <h2 ui-sref="home.state6" ng-click="vm.calcShowing=false">Weather</h2></div>
+        <h3 ui-sref="home.state6" ng-click="vm.calcShowing=false">Weather</h3></div>
     <div class="col col-xs-12 col-md-2">
-        <h2 ui-sref="home.state7" ng-click="vm.calcShowing=false">Movies</h2></div>
+        <h3 ui-sref="home.state7" ng-click="vm.calcShowing=false">Movies</h3></div>
     <div class="col col-xs-12 col-md-2">
-        <h2 ui-sref="home" ng-click="vm.calcShowing=true">Calculators</h2></div>
+        <h3 ui-sref="home" ng-click="vm.calcShowing=true">Calculators</h3></div>
     <div class="col col-xs-12 col-md-2">
-        <h2 ui-sref="home.state5" ng-click="vm.calcShowing=false">Memory</h2></div>
+        <h3 ui-sref="home.state5" ng-click="vm.calcShowing=false">Memory</h3></div>
 </div>
 <div class="row" ng-show="vm.calcShowing">
     <div class="col col-xs-4">
@@ -18,3 +19,4 @@
         <h3 ui-sref="home.state4">Change Calculuator</h3></div>
 </div>
 <div ui-view></div>
+<p class="text-center">On mobile, landscape orientation works best</p>

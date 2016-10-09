@@ -3,7 +3,7 @@
     <h2>Weather App</h2>
     <div id="appMain">
         <div class="container-fluid">
-            <p>Always know if you need an umbrella</p>
+            <h4>Always know if you need an umbrella</h4>
             <div class="row">
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('sandiego')">San Diego</button>
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('newyork')">New York</button>
@@ -12,7 +12,7 @@
                 <button type="button" class="btn btn-primary" ng-click="vm.newWeather('tokyo')">Tokyo</button>
             </div>
             <div class="input-group">
-                <input type="text" class="form-control" ng-model="vm.cityName" placeholder="Search for...">
+                <input type="text" class="form-control" ng-model="vm.cityName" placeholder="Search">
                 <span class="input-group-btn">
                         <button class="btn btn-default" type="button" ng-click="vm.format()">Go!</button>
                       </span>
