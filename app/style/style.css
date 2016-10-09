@@ -1,21 +1,3 @@
-body {
-    margin: 2%;
-}
-
-button {
-    width: 100%;
-    margin: 2%;
-}
-
-#calcList {
-    margin-top: 2%;
-}
-
-#ex1Slider .slider-selection {
-    background: #BABABA;
-}
-
-#sliderContainer {
-    margin-top: 2%;
-    margin-bottom: 2%;
+#menuBar {
+	border-bottom: 2px solid black;
 }

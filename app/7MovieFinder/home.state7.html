@@ -1,6 +1,6 @@
 <div ui-view></div>
 <!--input box and btn-->
-<div ng-hide="vm.hide" id="StateContainer" class="col-xs-8 col-xs-offset-2 container-fluid">
+<div ng-hide="vm.hide" id="StateContainer" class="col-xs-8 col-xs-offset-2 container-fluid text-center">
     <h2>Movie Finder</h2>
     <div id="appMain">
         <div class="container-fluid">
@@ -25,7 +25,7 @@
                     <div class="panel-body text-center">
                         <img height=200 width=131 src="{{movie.Poster}}">
                         <p>Filmed in {{movie.Year}}</p>
-                        <a ui-sref="main.state7.list({movieName:'{{movie.Title}}'})">View details</a>
+                        <a ui-sref="home.state7.list({movieName:'{{movie.Title}}'})">View details</a>
                     </div>
                 </div>
             </div>
