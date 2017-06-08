@@ -7,7 +7,7 @@
     // additional configuration goes here
     app.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         // For any unmatched url, redirect to /main
-        $urlRouterProvider.otherwise("home/orientation");
+        $urlRouterProvider.otherwise("home");
         // Now set up the states
         $stateProvider
             .state("register", {
